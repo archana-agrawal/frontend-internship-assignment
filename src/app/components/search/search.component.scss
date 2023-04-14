@@ -1,0 +1,106 @@
+// .spinner {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   z-index: 999;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   .overlay {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 100%;
+//     background-color: rgba(0, 0, 0, 0.4);
+//     z-index: 998;
+//   }
+// }
+
+.mat-spinner {
+  background: transparent !important;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #2196f3 !important;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.search-bar {
+  margin-left: 200px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  margin-bottom: 20px;
+}
+
+.clear-button {
+  background-color: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-left: 5px;
+  cursor: pointer;
+  
+  &:hover {
+    color: #000;
+  }
+}
+
+input[type="search"] {
+  flex-grow: 1; /* Expand to fill available space */
+  max-width: 500px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+
+  &::after {
+    content: "\00d7"; // cross symbol
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  &:not(:placeholder-shown) {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.icon {
+  padding-left: 25px;
+  background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+  background-size: 20px;
+}
+
+button {
+  margin-left: 20px;
+  padding: 8px;
+  background-color: #457ee7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #2764df;
+  }
+}

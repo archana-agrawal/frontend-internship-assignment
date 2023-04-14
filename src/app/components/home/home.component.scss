@@ -1,31 +1,107 @@
-.header {
-  @apply
-  tw-flex
-  tw-flex-row
-  tw-justify-between
-  tw-items-center
-  tw-rounded-4-px
-  tw-p-12-px
-  tw-m-24-px;
-  background: linear-gradient(146deg, #e1eeff 19.67%, #ffe4fb 127.56%);
+// .header {
+//   @apply
+//   tw-flex
+//   tw-flex-row
+//   tw-justify-between
+//   tw-items-center
+//   tw-rounded-4-px
+//   tw-p-12-px
+//   tw-m-24-px;
+//   background: linear-gradient(146deg, #e1eeff 19.67%, #ffe4fb 127.56%);
+// }
+
+// .search-button {
+//   @apply
+//   tw-border 
+//   tw-border-solid 
+//   tw-border-dark-border
+//   tw-rounded-4-px
+//   tw-flex
+//   tw-justify-center
+//   tw-h-60-px
+//   tw-w-200-px
+// }
+
+// .trending-subjects {
+//   @apply
+//   tw-bg-table-header-bg
+//   tw-p-12-px
+//   tw-rounded-4-px
+//   tw-shadow-lg
+// }
+
+/* sidebar.component.css */
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background-color: #252e3f;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
 }
 
-.search-button {
-  @apply
-  tw-border 
-  tw-border-solid 
-  tw-border-dark-border
-  tw-rounded-4-px
-  tw-flex
-  tw-justify-center
-  tw-h-60-px
-  tw-w-200-px
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  border-bottom: 1px solid #394867;
 }
 
-.trending-subjects {
-  @apply
-  tw-bg-table-header-bg
-  tw-p-12-px
-  tw-rounded-4-px
-  tw-shadow-lg
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
+
+.sidebar-item {
+  margin: 10px 0;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-link:hover {
+  background-color: #394867;
+}
+
+.sidebar-link.active {
+  background-color: #1a2233;
+}
+
+.sidebar-link i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.sidebar-link span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.search-content{
+  
+}
+
+
+
+// mat-sidenav {
+//   height: calc(100% - 64px);
+//   position: fixed;
+//   top: 64px;
+// }
+
+// mat-toolbar {
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   z-index: 2;
+// }

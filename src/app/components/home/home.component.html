@@ -1,4 +1,4 @@
-<div class="header">
+<!-- <div class="header">
   <div class="tw-text-24-px tw-font-600">Open Books Library</div>
   <div class="search-button">
     <mat-icon class="tw-mt-16-px" aria-label="Search Icon">search</mat-icon>
@@ -11,7 +11,16 @@
     >
   </div>
 </div>
-<div class="tw-flex tw-flex-row tw-m-24-px">
+<front-end-internship-assignment-search></front-end-internship-assignment-search> -->
+<!-- <mat-sidenav mode="side" opened="true" [style.width.px]="250">
+  <mat-nav-list>
+    <a mat-list-item href="#">Link 1</a>
+   <li class="tw-text-16-px tw-cursor-pointer tw-p-12-px" *ngFor="let subject of trendingSubjects" routerLink="/trending-subject/{{ subject.name }}">
+      {{ subject.name }}
+    </li>
+  </mat-nav-list>
+</mat-sidenav> -->
+<!-- <div class="tw-flex tw-flex-row tw-m-24-px">
   <section class="trending-subjects">
     <div class="tw-font-600 tw-text-24-px">Trending Subjects</div>
     <ul class="tw-list-none tw-pl-0">
@@ -20,4 +29,31 @@
       </li>
     </ul>
   </section>
+</div> -->
+
+<!-- sidebar.component.html -->
+<div>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h3>Home</h3>
+    </div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item">
+        <a routerLink="/" routerLinkActive="active" class="sidebar-link">
+          <i class="fas fa-home"></i>
+          <span>Search</span>
+        </a>
+      </li>
+      <li class="sidebar-link" *ngFor="let subject of trendingSubjects" routerLink="/trending-subject/{{ subject.name }}">
+          {{ subject.name }}
+      </li>
+    </ul>
+  </div>
+  <div class="search-content">
+    <front-end-internship-assignment-search (searchResultEvent)="searchResult($event)"></front-end-internship-assignment-search>
+  </div>
+  <div class="table-view-content">
+      <front-end-internship-assignment-table-view [searchList]="searchList"></front-end-internship-assignment-table-view>
+    </div>
 </div>
+

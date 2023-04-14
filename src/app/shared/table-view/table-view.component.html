@@ -1,8 +1,8 @@
 <div class="tw-m-24-px">
-  <div class="tw-mb-24-px tw-text-24-px"> Top {{ booksList.length }} book{{ booksList.length > 1 ? "s" : "" }} on {{ subjectName }}</div>
+  <!-- <div class="tw-mb-24-px tw-text-24-px"> Top {{ booksList.length }} book{{ booksList.length > 1 ? "s" : "" }} on {{ subjectName }}</div> -->
 
-  <ng-container>
-    <table class="table-view">
+  <ng-container *ngIf="booksList.length > 0">
+    <table class="table-auto">
       <thead>
         <tr class="table-row">
           <th class="header">Title and Sub Title</th>
@@ -23,4 +23,27 @@
       </tbody>
     </table>
   </ng-container>
+  <ng-container *ngIf="searchList.length > 0">
+    <table class="table-auto">
+      <thead>
+          <tr class="table-row">
+            <th class="header">Title and Sub Title</th>
+            <th class="header">Author</th>
+            <th class="header">First Publish Year</th>
+          </tr>
+        </thead>
+      <tbody class="table-body" *ngIf="searchList.length > 0">
+        <tr *ngFor="let searchItem of searchList" class="row-data">
+          <td>
+            <a class="tw-no-underline" href="https://openlibrary.org{{ searchItem.key }}" target="_blank">{{ searchItem.title }}</a>
+          </td>
+          <td>
+            {{ searchItem.author_name.length > 0 ? searchItem.author_name[0] : "Unknown" }}
+          </td>
+          <td>{{ searchItem.first_publish_year }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+
 </div>
