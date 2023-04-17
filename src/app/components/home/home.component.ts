@@ -17,8 +17,10 @@ export class HomeComponent implements OnInit {
     this.bookSearch = new FormControl('');
   }
 
-  searchResult(item : Search[]){
-    this.searchList = item
+  searchResult(
+    item: Search[],
+  ) {
+    this.searchList = item;
   }
 
   trendingSubjects: Array<any> = [

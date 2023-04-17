@@ -88,6 +88,6 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loading = true
+    this.loading = false
   }
 }

@@ -1,9 +1,10 @@
 .table-auto{
-  margin-left: 300px;
+  margin-left: 400px;
   margin-right: 200px;
   width : 60%;
   align-items: center;
   justify-content: center;
+  table-layout: fixed;
 }
 
 thead{
@@ -24,4 +25,5 @@ thead{
 td{
   border: 1px solid #ddd;
   padding: 8px;
+  text-align: center;
 }
