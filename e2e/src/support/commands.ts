@@ -14,17 +14,22 @@ declare namespace Cypress {
   interface Chainable<Subject> {
     login(email: string, password: string, firstName: stirng, lastName: string, cookies: string): void;
   }
+  googleAuth(firstName, lastName){
+    this.firstName = firstName,
+    this.lastName = lastName,
+  }
 }
 //
 // -- This is a parent command --
 Cypress.Commands.add('login', (email, password, firstName, lastName, cookies) => {
-  console.log('Custom command example: Login', email, password, firstName, lastName, cookies);
+  console.log('Custom command example: Login', email, password, firstName, lastName, cookies, google.com);
+  this.googleAuth(firstName="asddf", lastName="qwerr")
 });
 //
 // -- This is a child command --
 // Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
 //
-//
+
 // -- This is a dual command --
 // Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
 //
