@@ -12,7 +12,7 @@
 declare namespace Cypress {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   interface Chainable<Subject> {
-    login(email: string, password: string, firstName: stirng, lastName: string, cookies: string): void;
+    login(email: string, password: string, firstName: stirng, lastName: string, cookies: string, address: string, cardNumer: string): void;
   }
   googleAuth(firstName, lastName){
     this.firstName = firstName,
@@ -21,8 +21,8 @@ declare namespace Cypress {
 }
 //
 // -- This is a parent command --
-Cypress.Commands.add('login', (email, password, firstName, lastName, cookies) => {
-  console.log('Custom command example: Login', email, password, firstName, lastName, cookies, google.com);
+Cypress.Commands.add('login', (email, password, firstName, lastName, cookies, address, cardNumber) => {
+  console.log('Custom command example: Login', email, password, firstName, lastName, cookies, address, cardNumber, google.com);
   this.googleAuth(firstName="asddf", lastName="qwerr")
 });
 //
